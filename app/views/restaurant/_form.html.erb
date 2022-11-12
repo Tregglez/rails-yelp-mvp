@@ -1,0 +1,11 @@
+<%= form_for(restaurant) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :phone_number%>
+  <%= f.text_field :phone_number %>
+  <%= f.label :category %>
+  <%= f.select :category, [['chinese', 1], ['italian', 2], ['japanese', 3], ['french', 4], ['belgian', 5]] %>
+  <%= f.submit %>
+<% end %>

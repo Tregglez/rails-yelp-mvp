@@ -1,0 +1,15 @@
+<div class="container" style="margin-top: 5px; padding: 30px;
+                          border: solid 2px black; display: flex;
+                          flex-direction: column; justify-content: center;
+                          align-items: center;">
+  <h1>Restaurants</h1>
+    <ul>
+      <% @restaurants.each do |restaurant| %>
+        <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+      <% end %>
+    </ul>
+
+  <div class="btn btn-info">
+    <%= link_to 'Add a Restaurant', restaurants_new_path, :style=>'color: white; text-decoration: none; font-weight: 600;'  %>
+    </div>
+</div>
